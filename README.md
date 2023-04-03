@@ -18,10 +18,10 @@ Este repositório contém um arquivo em Python com funções para análise estat
 
 ## Como utilizar
 
-Para utilizar as funções deste arquivo em seu projeto, basta importar o arquivo "estatistica.py" e chamar as funções necessárias. Veja um exemplo:
+Para utilizar as funções deste arquivo em seu projeto, basta importar o arquivo "funcoes.py" e chamar as funções necessárias. Veja um exemplo:
 
 ```python
-import funções as fc 
+import funcoes as fc
 
 mylista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # Lista padrão
 meus_pesos = mylista #substitua pelo peso para calculo de media ponderada
