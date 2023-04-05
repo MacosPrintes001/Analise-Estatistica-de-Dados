@@ -1,5 +1,17 @@
 import numpy as np
 from collections import Counter
+from sympy import *
+
+
+def calcular_limite(funcao, a):
+    # Definindo a variável simbólica x
+    x = symbols('x')
+
+    # Calculando o limite da função quando x tende a a
+    limite = limit(funcao, x, a)
+
+    # Retornando o resultado
+    return limite
 
 
 def media_ponderada(valores, pesos):
@@ -69,29 +81,13 @@ def erro_padrao(lista):
     return erro_padrao
 
 
-mylista = [22.8, 20.2, 23.5, 24.8, 25.0]  # Lista padrão
-meus_pesos = mylista
+# Definindo a variável simbólica x
+x = symbols('x')
 
+# Definindo a função f(x)
+f = (x**2 - 1)/(x - 1)
 
-print("A Média de {} é: {:.3f}".format(mylista, media_simples(mylista)))
+# Calculando o limite de f(x) quando x tende a 1
+limite = limit(f, x, 1)
 
-print("A Média Ponderada de {} com peso {} é aproximadamente : {:.3f}".format(
-    mylista, meus_pesos, media_ponderada(mylista, meus_pesos)))
-
-print("A Mediana de {} é: {:.3f}".format(mylista, mediana(mylista)))
-
-print("A Moda de {} é: {}".format(mylista, moda(mylista)))
-
-print("A Amplitude de {} é: {:.3f}".format(mylista, amplitude(mylista)))
-
-print("A Variância de {} é: {:.3f}".format(mylista, variancia(mylista)))
-
-print("O Desvio Padrão de {} é: {:.3f} ".format(mylista, desvPadrao(mylista)))
-
-print("O Coeficiente de variação de {} é: {:.3f}%".format(
-    mylista, coeficiente_variacao(mylista)))
-
-print("A Variação Média de {} é: {:.3f}".format(
-    mylista, variacao_media(mylista)))
-
-print("O Erro Padrão de {} é: {:.3f}".format(mylista, erro_padrao(mylista)))
+print(limite)
